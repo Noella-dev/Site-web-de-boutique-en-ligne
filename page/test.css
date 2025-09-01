@@ -1,0 +1,34 @@
+/*.contenu{
+    width: 90%;
+    height: 80vh;
+    position: fixed;
+    background-color:rgb(84, 192, 147);
+    border-radius: 29px;
+    display: flex;
+    margin-left: 5%;
+    margin: 5% 5% 0% 5%;
+    overflow-x: scroll;
+}
+.navbar ul li a:hover{
+    color:#ff7b00;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: white;
+    transition: 0.3s;
+    
+}*/
+button{
+    background: green;
+    border: 2px solid black;
+    color:green;
+    display: block;
+    font-family: inherit;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+<style>
+#qty{
+    width: 5rem;
+}
+.counter{
+    width: 50%;
+    margin: 0 auto;
+}
+</style>
