@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "the_bride_in_hacienda";
+    src: 
+    url("../The\ Bride\ in\ Hacienda.ttf"),
+}
+:root{
+    --bg-color:#ffff;
+    --text-color:#0a6dca;
+    --main-color:rgb(10, 121, 136);
+    --second-color:#1f07ff;
+    --other-color:#da460c;
+
+    --h1-font:2rem;
+    --h2-font:1rem;
+    --p-font:1.1rem;
+}
+.portfolio{
+    width: 1210px;
+    height: auto;
+    position:relative;
+    left: 80px;
+    right: 80px;top: 60px;bottom: 60px;
+    border: solid white;
+    border-radius: 10px;
+    box-shadow:2px 2px 15px 2px rgb(10, 121, 136);
+}
+.container{
+    width: 1210px; 
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;  
+    position: fixed;
+    background: var(--main-color); 
+    align-items: center;
+    height: 50px;
+    border-radius: 10px;
+   margin: -3px;
+}
+.container .logo h2{
+    color: white;
+    font-size: 35px;
+    font-family:"the_bride_in_hacienda";
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin:0 15px;
+}
+.menu li a{
+    color:white;
+    font-size: var(--p-font);
+}
+.menu li a:hover{
+    border-bottom: 3px solid white;
+}
+/*about*/
+#about{
+    position: relative;
+    margin-top: 50px;
+    height: 70vh;
+    width: 1205px;
+    background: var(--second-bg-color);
+    gap: 20px;
+    /*border: solid red;*/
+    display:block;
+    align-items: center;border-radius: 20px;
+    justify-content: space-between;
+}
+.about_me{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_text h1{
+    color:var(--main-color);
+    font-size: 35px;
+    font-family:"the_bride_in_hacienda";
+}
+.about_text p{
+    color:gray;
+}
+
+.image{
+   margin-top: 20px;
+}
+.bouton{
+    /*border: solid palevioletred;*/
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 50px;
+    margin-left: 90px;
+}
+
+.bouton li a{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color:var(--main-color);
+    color: var(--bg-color);
+    font-size:16px;
+    text-transform: uppercase;
+    transition: all .50s ease;
+    border-radius: 12px;
+}
+
+.bouton li a:hover{
+    transform: translateY(-8px);
+    cursor: pointer;
+    background: var(--main-color);
+}
+/*responsive*/
+@media screen and (max-width: 768px) {
+    .portfolio {
+        width: 100%; /* Prend toute la largeur de l'écran */
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        box-shadow: none; /* Supprimer l'ombre portée pour un design plus épuré */
+        padding: 0 15px; /* Ajouter un peu de marge sur les côtés */
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empile le logo et le menu verticalement */
+        height: auto;
+        padding-top: 10px;
+        position: relative; /* Ne pas le laisser fixe pour ne pas cacher le contenu */
+    }
+    .container .logo h2 {
+        font-size: 28px;
+    }
+    .menu {
+        flex-direction: column; /* Empile les liens du menu */
+        align-items: center;
+        margin-top: 10px;
+    }
+    .menu li {
+        margin: 5px 0; /* Espacer les liens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+    .about_me {
+        flex-direction: column; /* Empile l'image et le texte verticalement */
+        text-align: center; /* Centre le texte */
+    }
+    .about_text {
+        order: 2; /* Place le texte en bas, après l'image */
+        margin-top: 20px;
+    }
+    .about_text h1 {
+        font-size: 28px;
+    }
+    .about_text p {
+        padding: 0 10px;
+    }
+    .image {
+        order: 1; /* Place l'image en haut */
+        margin-top: 0;
+    }
+    .image img {
+        width: 250px; /* Redimensionne l'image pour les petits écrans */
+        height: auto;
+    }
+    .bouton {
+        flex-direction: column; /* Empile les boutons */
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+        gap: 10px; /* Ajoute de l'espace entre les boutons */
+        margin-top: 20px;
+    }
+}
